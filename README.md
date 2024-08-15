@@ -76,6 +76,3 @@ cd <repo>/source/c_solver
 - `cd <repo>/source`
 - Figure 7: `python test.py fig_7 <epoch_num> <topology>` , `epoch_num` can be set smaller than 10 (e.g. 2) to get results faster topologies are in [A,B,C,D,E].
 
-
-## 4. Contact
-Original NeuroPlan contact: For any question, please contact `hzhu at jhu dot edu`.
