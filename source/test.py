@@ -30,9 +30,11 @@ def read_topo(topo_name, adjust_factor_in=0.5):
     return topo
 
 # # implementation efficiency
-def fig_7(epoch_num=10):
+def fig_7(epoch_num=10, topology_name="A"):
     checker_mode_list = ["all", "sa", "vanilla"]
-    topo_name_list = ["A"]#, "B", "C", "D", "E"]
+    topo_name_list = ["A", "B", "C", "D", "E"]
+    assert(topology_name in topo_name_list), 'topology_name should be in ["A", "B", "C", "D", "E"]'
+    topo_name_list = [topology_name]
     # topo_name_list = ["B"]#, "C", "D", "E"]
     # topo_name_list = ["E"]#, "C", "D", "E"]
 
@@ -153,7 +155,7 @@ def params_rl(adjust_factor_in=1.0, num_gnn_layer=2, max_n_delta_bw=1, hidden_si
 if __name__ == "__main__":
     arg = sys.argv[1]
     if arg == 'fig_7':
-        fig_7(int(sys.argv[2]))
+        fig_7(int(sys.argv[2]), sys.argv[3])
         # fig_7(epoch_num=10)
     elif arg == 'fig_8':
         fig_8()
