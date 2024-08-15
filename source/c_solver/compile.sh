@@ -1,0 +1,1 @@
+c++ -O3 -Wall -shared -std=c++11 -fPIC `python3 -m pybind11 --includes` gurobi_c.cpp -o ../gurobi_c`python3-config --extension-suffix` -I/home/nimroda/neuroplan/gurobi902/linux64/include -L/home/nimroda/neuroplan/gurobi902/linux64/lib -lgurobi_c++ -lgurobi90
